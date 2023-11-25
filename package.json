@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.1",
     "cssnano": "^6.0.1",
     "del": "^6.0.0",
@@ -27,8 +27,9 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.31",
     "postcss-combine-media-query": "^1.0.1",
     "prettier": "^2.8.7",
     "stylelint": "^15.4.0"
