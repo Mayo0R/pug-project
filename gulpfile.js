@@ -76,7 +76,7 @@ function clean() {
 function watchFiles() {
   gulp.watch(['src/pages/**/*.pug'], pug);
   gulp.watch(['src/**/*.html'], html);
-  gulp.watch(['src/blocks/**/*.css'], css);
+  gulp.watch(['src/components/**/*.css'], css);
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
 }
 
