@@ -1,21 +1,21 @@
 extends ../layouts/default
-    
-    block content
-      article.card
-        .card__image
-          img(src='/images/card.svg', alt="")
-        .card__content
-          .card__title Заголовок карточки 1
-          .card__text Текст карточки 1
-      article.card
-        .card__image
-          img(src='/images/card.svg', alt="")
-        .card__content
-          .card__title Заголовок карточки 2
-          .card__text Текст карточки 2
-      article.card
-        .card__image
-          img(src='/images/card.svg', alt="")
-        .card__content
-          .card__title Заголовок карточки 3
-          .card__text Текст карточки 3
+
+block variables
+	- var title = 'Главная страница'
+	- var includeHomeLink = false
+	- 
+		var cardsData = [
+			{'image': '/images/card.svg', 'title': 'Заголовок карточки 1', 'text': 'Текст карточки 1'},
+			{'image': '/images/card.svg', 'title': 'Заголовок карточки 2', 'text': 'Текст карточки 2'},
+			{'image': '/images/card.svg', 'title': 'Заголовок карточки 3', 'text': 'Текст карточки 3'}
+		]
+
+block content
+	include ../components/cards-list/cards-list
+		block items
+			include ../components/card/card
+			if cardsData.length > 0
+				each card in cardsData
+					+card(card.image, card.title, card.text)
+			else 
+				p Карточек нет 😉
